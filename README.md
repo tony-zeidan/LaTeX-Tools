@@ -1,5 +1,5 @@
 # LaTeX-Tools
 A repo of LaTeX tools I have discovered.
 
-# License
+## License
 No license, free information.
