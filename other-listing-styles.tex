@@ -1,0 +1,124 @@
+\definecolor{deepwhite}{gray}{0.9}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{turqoise}{rgb}{64,224,208}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+% formatting and styling
+language=Python,
+basicstyle=\normalfont\ttfamily\color{deepwhite},
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=8pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2,
+numberstyle=\scriptsize\color{black},
+stepnumber=1,
+frame=lines,
+backgroundcolor=\color{darkgray},   
+commentstyle=\color{codegray},
+keywordstyle=\color{magenta},
+stringstyle=\color{codegreen},
+}}
+
+% AST style for highlighting
+\newcommand\aststyle{\lstset{
+% formatting and styling
+language=Python,
+basicstyle=\normalfont\ttfamily,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=8pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2,
+numberstyle=\scriptsize\color{black},
+stepnumber=1,
+deletekeywords=[2]{id},
+morekeywords=[1]{Module, ClassDef, Import, ImportFrom, FunctionDef, Assign, Call, Attribute, BinOp, Name, Tuple, Constant}, 
+morekeywords=[2]{id, ctx, value, body},
+frame=lines,
+keywordstyle=[1]\color{blue},
+keywordstyle=[2]\color{magenta},
+stringstyle=\color{codegreen},
+}}
+
+% Basic code style
+\newcommand\basiccodestyle{\lstset{
+% formatting and styling
+basicstyle=\normalfont\ttfamily,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                 
+numbers=left,                    
+numbersep=8pt,                  
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2,
+numberstyle=\scriptsize\color{black},
+stepnumber=1,
+frame=lines
+}}
+
+% Plain text style
+\newcommand\plaintextstyle{\lstset{
+% formatting and styling
+basicstyle=\normalfont\ttfamily,
+breakatwhitespace=false,         
+breaklines=true,                 
+captionpos=b,                    
+keepspaces=true,                                   
+showspaces=false,                
+showstringspaces=false,
+showtabs=false,                  
+tabsize=2,
+frame=lines
+}}
+
+
+% Python environment
+\lstnewenvironment{pythonlisting}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Plain text environment
+\lstnewenvironment{astlisting}[1][]
+{
+\aststyle
+\lstset{#1}
+}
+{}
+
+% Basic code environment
+\lstnewenvironment{codelisting}[1][]
+{
+\basiccodestyle
+\lstset{#1}
+}
+{}
+
+% Plain text environment
+\lstnewenvironment{plaintextlisting}[1][]
+{
+\plaintextstyle
+\lstset{#1}
+}
+{}
